@@ -2,17 +2,13 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Movement : MonoBehaviour
+namespace ProceduralAnimation
 {
-    // Start is called before the first frame update
-    void Start()
+    public class Movement : MonoBehaviour
     {
-        
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
+        private void Update()
+        {
+            transform.Translate(Input.GetAxis("Vertical") * transform.forward * 5f * Time.deltaTime);
+        }
     }
 }
